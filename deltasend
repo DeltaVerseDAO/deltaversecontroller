@@ -1,14 +1,56 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
 
-contract TestContract {
-    uint public i;
+contract dvcontroller {
+  // string[] public wishlist;
+  Keyboard[] public wishlist;
 
-    function callMe(uint j) public {
-        i += j;
-    }
+  function getwishes() view public returns(Wishes[] memory) {
+    return createdwishes;
+  }
 
-    function getData() public pure returns (bytes memory) {
-        return abi.encodeWithSignature("callMe(uint256)", 123);
-    }
+function create(
+    wishtype _kind,
+    bool _isPBT,
+    string calldata _filter
+  ) external {
+    Keyboard memory newWish = Wishes({
+      kind: _kind,
+      isPBT: _isPBT,
+      filter: _filter,
+      owner: msg.sender
+    });
+
+    createdKeyboards.push(newWish);
+}
+
+  enum WishKind { 
+	  HundredPercent
+      EightyPercent, 
+      SeventyFivePercent,
+      SixtySixPercent
+	  FifyOnePercent
+      FifteenPercent
+      OnePercent
+	}
+
+  struct Wish {
+    KeyboardKind kind; 
+    // ABS = false, PBT = true
+    bool isPBT;
+    // tailwind filters to layer over
+    string filter;
+    // user who created it! 
+    address owner;
+  }
+
+// contract parameter to recieve with fund dispersal at subsequent block
+
+function tip(uint256 _index) external payable  {
+  address payable owner = payable(createdWishes[_index].owner);
+  owner.transfer(msg.value);
+}
+
+
+
 }
