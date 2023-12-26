@@ -9,6 +9,7 @@ Machine Learning delivers the Automation Engine. to do: Expansion of DAO as a gl
 As every wallet is an ID so is every ID the master controller of the dapplication. Vote is the controller as it is a message of yes or no across chains. Wallet interaction is facilitated as DAO to DAO action event sequencing.<br />
 
 <a href="https://opensea.io/assets/matic/0x024b464ec595f20040002237680026bf006e8f90/1">DELTA VERSE</a> 20000<br />
- "I am who I am because of who I am"
+ "I am who I am because of who I am"<br />
+ include <a href="https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/74758963033027311414571102422197684065905824695236570321048308729406205984769">DAOVATAR</a>
 
 
