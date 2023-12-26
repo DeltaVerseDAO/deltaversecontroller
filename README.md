@@ -17,3 +17,5 @@ As every wallet is an ID so is every ID the master controller of the dapplicatio
 
 "from the power of one is the power of many"
 
+see also <a href="https://github.com/metasnaps/.github">metamask deltaverse snaps</a>
+
